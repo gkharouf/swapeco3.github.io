@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/* HTML and Body */
+
+html {
+   background: rgb(240, 248, 238); 
+   font-family: 'Open Sans', Arial, sans-serif;
+   height: 100%;
+}
+
+body {
+   background-color: white;
+   box-shadow: rgb(151, 171, 151) 10px 0px 40px, rgb(151, 171, 151) -10px 0px 40px;
+   border-left: 1px solid rgb(200, 220, 200); 
+   border-right: 1px solid rgb(200, 220, 200);
+   min-height: 100%;   
+   margin: 0 auto;
+   min-width: 400px;
+   max-width: 1024px;   
+   width: 100%; 
+}
+
+/* Header */
+header {
+   background: rgb(100, 150, 100); 
+}
+
+header img#logoimg {
+   display: block;
+   height: 200px;
+   width: 100%;
+}
+
+/* Navigation list*/
+
+header nav ul {
+   width: 100%;
+}
+
+header nav ul li {
+   font-size: 1.2em;
+}
+
+header nav ul li a {
+   color: white;
+   display: block;
+   padding: 10px 20px;
+   width: 100%;
+}
+
+header nav ul li a:hover {
+   color: rgb(45, 100, 45); 
+}
+
+a#navicon {
+   display: none;
+}
+
+/* Article */
+article {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   width: 90%;
+   margin: 20px auto;
+}
+
+article img#homeimg {
+   
+   display: block;
+   height: 300px;
+   width: 100%;
+   border: 10px solid rgb(130, 200, 130); 
+   border-radius: 10px;  
+}
+
+article h1, article h2 {
+   color: rgb(34, 85, 34);
+   font-family: 'Lora', serif;
+   font-weight: normal;
+   letter-spacing: 0.03em;
+   line-height: 1.2em;
+   margin-bottom: 20px;
+}
+
+article h1 {
+   font-family: 'Ryman Eco', sans-serif;
+   font-size: 2.5em;
+}
+
+article h2 {
+   padding-top: 20px;
+   font-family: 'Ryman Eco', sans-serif;
+   font-size: 2em;
+}
+
+article p {
+
+   line-height: 1.7;
+   margin-bottom: 20px;
+}
+
+article p em {
+   color: rgb(45, 100, 45); 
+}
+article ul {
+   padding-bottom: 20px;
+}
+/*video*/
+
+video {
+   border: 10px solid rgb(130, 200, 130); 
+   border-radius: 10px; 
+   padding: 10px; 
+}
+
+/* social media */
+
+.social-links {
+   display: flex;
+   justify-content: center; 
+   gap: 20px; 
+}
+
+/* social imgs */
+.social-links a img {
+   width: 100px; 
+   height: 100px; 
+   object-fit: cover; 
+}
+
+.social-links-contact {
+   display: flex;
+   justify-content: left; 
+   gap: 20px; 
+}
+
+/* social imgs */
+.social-links-contact a img {
+   width: 100px; 
+   height: 100px; 
+   object-fit: cover; 
+}
+/* join button */
+.join-button {
+   display: flex;
+   justify-content: left; 
+    
+}
+
+.join-button a img {
+   width: 200px; 
+   height: 200px; 
+   object-fit: cover;
+
+}
+/* Scroll bar */
+.scrolling-bar {
+   overflow: hidden;
+   white-space: nowrap;
+   width: 100%; 
+   background-color: #f5f5f5; /* Optional */
+ }
+ 
+ .scrolling-content {
+   display: inline-flex;
+   animation: scroll-left 10s linear infinite;
+ }
+ 
+ .scrolling-content img {
+   width: 200px; 
+   height: auto;
+   margin-right: 200px;
+   border: 10px solid rgb(130, 200, 130); 
+   border-radius: 10px; 
+ }
+
+ /* Keyframes for scrolling */
+ @keyframes scroll-left {
+   0% {
+     transform: translateX(0);
+   }
+   100% {
+     transform: translateX(-100%);
+   }
+ }
+ 
+/* Footer */   
+
+footer {
+   clear: both;
+   color: white;    
+   background: linear-gradient(to bottom, rgb(100, 150, 100), rgb(50, 85, 50)); 
+   font-size: 0.9em;  
+   font-style: normal;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   text-align: center;
+   padding-top: 10px;
+}
+
+
+/*0px to 640px */
+
+@media only screen and (max-width: 640px) {
+   a#navicon {
+      display: block; 
+   }
+
+   header nav {
+      padding-bottom: 5px;
+   }
+
+   header nav ul {
+      padding-bottom: 10px;
+      display: none;
+   }
+
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+
+   a#navicon:hover + ul, header nav ul:hover {
+      display: block;
+   }
+   
+   header img#logoimg {
+      width: 100%;
+   }
+   
+   article {
+      display: block;
+   }
+
+   footer nav ul, footer section {
+      font-size: 1.2em;
+      width: 100%;
+   }
+}
+
+/*greater than 640px */
+@media only screen and (min-width: 641px) {
+   header nav ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      flex: 0 1 auto;
+   }
+}
